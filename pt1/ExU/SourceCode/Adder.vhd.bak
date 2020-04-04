@@ -26,6 +26,6 @@ begin
 
 		carry(i+1) <= g(i) OR (carry(i) AND p(i));
 		
-		Y <= carry(i) XOR p(i);
+		Y(i) <= carry(i) XOR p(i);
  	end generate gen_rip;
 end architecture rtl;

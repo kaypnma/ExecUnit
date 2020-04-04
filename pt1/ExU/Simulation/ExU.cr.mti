@@ -7,6 +7,38 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity TbLogicUnit
 -- Compiling architecture behavioural of TbLogicUnit
 
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ConfigExU.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ConfigExU.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling configuration FuncLUSim
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading entity TbLogicUnit
+-- Loading architecture behavioural of TbLogicUnit
+-- Loading entity LogicUnit
+-- Compiling configuration TimeLUSim
+-- Loading entity TbLogicUnit
+-- Loading architecture behavioural of TbLogicUnit
+-- Loading entity LogicUnit
+-- Compiling configuration FuncAUSim
+-- Loading entity TbArithUnit
+-- Loading architecture behavioural of TbArithUnit
+-- Loading entity ArithUnit
+-- Compiling configuration TimeAUSim
+-- Loading entity TbArithUnit
+-- Loading architecture behavioural of TbArithUnit
+-- Loading entity ArithUnit
+
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity LogicUnit
+-- Compiling architecture rtl of LogicUnit
+
 } {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -15,5 +47,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity TbArithUnit
 -- Compiling architecture behavioural of TbArithUnit
+
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Adder
+-- Compiling architecture rtl of Adder
 
 } {} {}}

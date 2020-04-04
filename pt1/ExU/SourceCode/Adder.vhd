@@ -20,12 +20,14 @@ begin
 	Cout <= carry(64);
 	Ovfl <= carry(63) XOR carry(64); 
 
+	-- generate for loop for ripple adder
 	gen_rip: for i in 0 to N-1 generate
+		-- calculate generates and propagates
 		g(i) <= A(i) AND B(i);
 		p(i) <= A(i) XOR B(i);
 
+		-- calculate carries and sums
 		carry(i+1) <= g(i) OR (carry(i) AND p(i));
-		
 		Y(i) <= carry(i) XOR p(i);
  	end generate gen_rip;
 end architecture rtl;

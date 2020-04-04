@@ -9,38 +9,38 @@ z2
 cModel Technology
 dC:/Users/Kay Arellano/Desktop/LB03.1-350-1201
 Eadder
-Z0 w1585879806
+Z0 w1585885233
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z4 dC:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation
-Z5 8C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd
-Z6 FC:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd
+Z5 8../SourceCode/Adder.vhd
+Z6 F../SourceCode/Adder.vhd
 l0
 L5
-VYfVnf;Tn`]]dg1_HkFoK31
+V_7_FSdib7NcMdJof6MQn13
 !s100 oLbH4>1R2QGBdH6YNaP`40
 Z7 OV;C;10.5b;63
-32
-Z8 !s110 1585879812
+33
+Z8 !s110 1586033106
 !i10b 1
-Z9 !s108 1585879811.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd|
-Z11 !s107 C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd|
+Z9 !s108 1586033106.000000
+Z10 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|../SourceCode/Adder.vhd|
+Z11 !s107 ../SourceCode/Adder.vhd|
 !i113 1
-Z12 o-work work -2002 -explicit
+Z12 o-work work -2008 -explicit
 Z13 tExplicit 1 CvgOpt 0
 Artl
 R1
 R2
 R3
-DEx4 work 5 adder 0 22 YfVnf;Tn`]]dg1_HkFoK31
+Z14 DEx4 work 5 adder 0 22 _7_FSdib7NcMdJof6MQn13
 l18
 L15
-VJH`MiTfC<Wo]KPLTUkKJR0
-!s100 8mb`Y?c^AKX@gJZn7ETa51
+VEYgIeIDz53]aQC6fA;nBW0
+!s100 86GE=zneE;6jGS8CeDHbQ1
 R7
-32
+33
 R8
 !i10b 1
 R9
@@ -49,79 +49,148 @@ R11
 !i113 1
 R12
 R13
-Cfunclusim
-Z14 eTbLogicUnit
-Z15 abehavioural
-Z16 DEx4 work 9 logicunit 0 22 b:YM]144GLQm<kbzB_^>80
-Z17 DAx4 work 11 tblogicunit 11 behavioural 22 HUeAiGW2Qh9JTcLaXDng61
+Earithunit
+Z15 w1586032262
 R1
 R2
 R3
-Z18 DEx4 work 11 tblogicunit 0 22 :aF1E7<jIb_KJZ4nYJZ[i3
-Z19 w1585873324
 R4
-Z20 8ConfigExU.vhd
-Z21 FConfigExU.vhd
+Z16 8../SourceCode/ArithUnit.vhd
+Z17 F../SourceCode/ArithUnit.vhd
+l0
+L5
+VhiE83CMYV8bSK=Rn@Fz`Q0
+!s100 HDh8nbN8^bF0GcL_]][;_0
+R7
+33
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|../SourceCode/ArithUnit.vhd|
+Z19 !s107 ../SourceCode/ArithUnit.vhd|
+!i113 1
+R12
+R13
+Artl
+R14
+R1
+R2
+R3
+Z20 DEx4 work 9 arithunit 0 22 hiE83CMYV8bSK=Rn@Fz`Q0
+l22
+L15
+V1FndlEXTm5Iz791DmP3]T3
+!s100 dVij7;Wl<ZjaF4cG>3`JU3
+R7
+33
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Cfuncausim
+Z21 eTbArithUnit
+Z22 abehavioural
+R20
+Z23 DAx4 work 11 tbarithunit 11 behavioural 22 LfLGc[H^QlaPjNeo8FDLU1
+R1
+R2
+R3
+Z24 DEx4 work 11 tbarithunit 0 22 H?jnlGf<UDYSYk@9Scd433
+Z25 w1585966995
+R4
+Z26 8ConfigExU.vhd
+Z27 FConfigExU.vhd
+l0
+L15
+V`<aJ^VfHk75_i^^[9k2ZV0
+!s100 ?D3XPUQgkHV;RRBPGZ^T;3
+R7
+33
+Z28 !s110 1586033107
+!i10b 1
+Z29 !s108 1586033107.000000
+Z30 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=time,-cmd,msg|ConfigExU.vhd|
+Z31 !s107 ConfigExU.vhd|
+!i113 1
+R12
+R13
+Cfunclusim
+Z32 eTbLogicUnit
+R22
+Z33 DEx4 work 9 logicunit 0 22 b:YM]144GLQm<kbzB_^>80
+Z34 DAx4 work 11 tblogicunit 11 behavioural 22 HUeAiGW2Qh9JTcLaXDng61
+R1
+R2
+R3
+Z35 DEx4 work 11 tblogicunit 0 22 :aF1E7<jIb_KJZ4nYJZ[i3
+R25
+R4
+R26
+R27
 l0
 L1
 VUz6o]e?NCzlMVDRM7DK1X3
 !s100 1I?ZbB3Lg;edQG`Y4C?z70
 R7
 33
-Z22 !s110 1585873649
+R28
 !i10b 1
-Z23 !s108 1585873648.000000
-Z24 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=time,-cmd,msg|ConfigExU.vhd|
-Z25 !s107 ConfigExU.vhd|
+R29
+R30
+R31
 !i113 1
-Z26 o-work work -2008 -explicit
+R12
 R13
 Elogicunit
-Z27 w1585873322
+Z36 w1585873322
 R1
 R2
 R3
 R4
-Z28 8../SourceCode/LogicUnit.vhd
-Z29 F../SourceCode/LogicUnit.vhd
+Z37 8C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd
+Z38 FC:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd
 l0
 L5
 Vb:YM]144GLQm<kbzB_^>80
 !s100 mWdDz5YWH4CJ?26DcEHXG0
 R7
 33
-Z30 !s110 1585873648
+Z39 !s110 1585982216
 !i10b 1
-R23
-Z31 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|../SourceCode/LogicUnit.vhd|
-Z32 !s107 ../SourceCode/LogicUnit.vhd|
+Z40 !s108 1585982216.000000
+Z41 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd|
+Z42 !s107 C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd|
 !i113 1
-R26
+R12
 R13
 Artl
 R1
 R2
 R3
-R16
+R33
 l20
 L13
 VOQgclJiblQ>a@VD]F]W^g0
 !s100 `:m>Mj??9]m:l5::6S6Xf1
 R7
 33
-R30
+R39
 !i10b 1
-R23
-R31
-R32
+R40
+R41
+R42
 !i113 1
-R26
+R12
 R13
 Art1
 R1
 R2
 R3
-R16
+R33
 l20
 L13
 VFX=PPWg1>DGmL]Ki:M_942
@@ -131,118 +200,147 @@ R7
 !s110 1585873160
 !i10b 1
 !s108 1585873159.000000
-R31
-R32
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|../SourceCode/LogicUnit.vhd|
+!s107 ../SourceCode/LogicUnit.vhd|
 !i113 1
-R26
+R12
 R13
 w1585872469
+F../SourceCode/LogicUnit.vhd
+8../SourceCode/LogicUnit.vhd
 Etbarithunit
-Z33 w1585281828
+Z43 w1585981694
 R1
 R2
 R3
 R4
-Z34 8C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd
-Z35 FC:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd
+Z44 8TBArithUnit.vhd
+Z45 FTBArithUnit.vhd
 l0
 L7
 VH?jnlGf<UDYSYk@9Scd433
 !s100 nV1D7fnIP>bl9@SHD^z]H1
 R7
 33
-Z36 !s110 1585873331
+R28
 !i10b 1
-Z37 !s108 1585873331.000000
-Z38 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd|
-Z39 !s107 C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd|
+R9
+Z46 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|TBArithUnit.vhd|
+Z47 !s107 TBArithUnit.vhd|
 !i113 1
-R26
+R12
 R13
 Abehavioural
 R1
 R2
 R3
-DEx4 work 11 tbarithunit 0 22 H?jnlGf<UDYSYk@9Scd433
+R24
 l35
 L11
-VVY<aabdg2gPM0UiDnUcmT3
-!s100 ?6lWP>bBzdjVm`HZSX8U62
+VLfLGc[H^QlaPjNeo8FDLU1
+!s100 WQ?4S3Z1l41fWZSW7k61V2
 R7
 33
-R36
+R28
 !i10b 1
-R37
-R38
-R39
+R9
+R46
+R47
 !i113 1
-R26
+R12
 R13
 Etblogicunit
-R33
+Z48 w1585281828
 R1
 R2
 R3
 R4
-Z40 8TBLogicUnit.vhd
-Z41 FTBLogicUnit.vhd
+Z49 8C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd
+Z50 FC:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd
 l0
 L7
 V:aF1E7<jIb_KJZ4nYJZ[i3
 !s100 1CFj:XSGgajROW^G:?_><3
 R7
 33
-R30
+R39
 !i10b 1
-R23
-Z42 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|TBLogicUnit.vhd|
-Z43 !s107 TBLogicUnit.vhd|
+R40
+Z51 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd|
+Z52 !s107 C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd|
 !i113 1
-R26
+R12
 R13
 Abehavioural
 R1
 R2
 R3
-R18
+R35
 l46
 L11
 VHUeAiGW2Qh9JTcLaXDng61
 !s100 37^bbYcBSd`8Q]bJE`n223
 R7
 33
-R30
+R39
 !i10b 1
-R23
-R42
-R43
+R40
+R51
+R52
 !i113 1
-R26
+R12
 R13
-Ctimelusim
-R14
-R15
-R16
-R17
+Ctimeausim
+R21
+R22
+R20
+R23
 R1
 R2
 R3
-R18
-R19
+R24
+R25
 R4
-R20
-R21
+R26
+R27
+l0
+L22
+Vc@j0<]>]2McV@A_In0?[D3
+!s100 R2Kc^HfY?<C>3UmQcD?gm0
+R7
+33
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R12
+R13
+Ctimelusim
+R32
+R22
+R33
+R34
+R1
+R2
+R3
+R35
+R25
+R4
+R26
+R27
 l0
 L8
 Vj`:ZLjB?3a?cGJhV;ID502
 !s100 YGhEgiCJcm@dDJh:JeAi`1
 R7
 33
-R22
+R28
 !i10b 1
-R23
-R24
-R25
+R29
+R30
+R31
 !i113 1
-R26
+R12
 R13
