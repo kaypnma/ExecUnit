@@ -12,9 +12,6 @@ end entity LogicUnit;
 
 architecture rtl of LogicUnit is 
 	signal logicFnSel : std_logic_vector(1 downto 0); 
---	signal Aand, Band, Yand : std_logic_vector(N-1 downto 0); 
---	signal Aor, Bor, Yor : std_logic_vector(N-1 downto 0); 
---	signal Axor, Bxor, Yxor : std_logic_vector(N-1 downto 0); 
 	signal a_sig, b_sig : std_logic_vector(N-1 downto 0); 
 	signal y_and, y_or, y_xor : std_logic_vector(N-1 downto 0); 
 begin
