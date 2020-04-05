@@ -15,7 +15,6 @@ End Entity ArithUnit;
 architecture rtl of ArithUnit is
 	signal y_a, y_b, sum : std_logic_vector(N-1 downto 0);
 	signal c64 : std_logic;
-	signal tmp : std_logic_vector(N-1 downto 0);
 	signal sign : std_logic;
 	signal overflow : std_logic;
 	signal zeros : std_logic_vector(N-1 downto 0) := (others => '0');
@@ -40,7 +39,7 @@ begin
 	Cout <= c64;
 	
 	-- Zero
-	process(sum)
+	process(sum, zeros)
 	begin
 		if (sum = zeros) then
 			Zero <= '1';
@@ -53,16 +52,15 @@ begin
 	AltBu <= NOT c64;
 
 	-- AltB (signed)
-	-- lecture 7 --> Cout, Ovfl (c64 XOR c63)
+	-- lecture 7 --> sum63, Ovfl (c64 XOR c63)
 	AltB <= sum(63) XOR overflow;
 
 	-- sign extend
 	sign <= sum(31);
 
 	with ExtWord select
-		tmp <= 	sum when '0',
-			(N-1 downto 32 => sign) & sum(31 downto 0) when others;		
-	Y <= tmp;	
+		Y <= 	sum when '0',
+			(N-1 downto 32 => sign) & sum(31 downto 0) when others;			
 end architecture rtl;
 
 

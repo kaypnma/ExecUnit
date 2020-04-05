@@ -12,7 +12,8 @@ Architecture behavioural of TbArithUnit is
 	Constant ClockPeriod : time := 2 ns;
 	Constant ResetPeriod : time := 5 ns;
 	Constant PreStimTime : time := 1 ns;
-	Constant PostStimTime : time := 8 ns;
+	--Constant PostStimTime : time := 8 ns;
+	Constant PostStimTime : time := 9 ns;
 	
 	Signal Sstable, Squiet : boolean := false;
 
