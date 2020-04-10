@@ -9,7 +9,6 @@ Generic ( N : natural := 64 );
 End Entity TbLogicUnit;
 
 Architecture behavioural of TbLogicUnit is
-	Constant TestVectorFile : string := "LogicUnit00.tvs";
 	Constant ClockPeriod : time := 2 ns;
 	Constant ResetPeriod : time := 5 ns;
 	Constant PreStimTime : time := 1 ns;
@@ -61,12 +60,11 @@ STIM:	Process is
 			Variable ResultV : std_logic := 'X';
 -- Variables used for File I/O.
 			Variable LineBuffer : line;
-			Variable Avar, Bvar, Yvar : std_logic_vector( N-1 downto 0 );
+			Variable Avar, Bvar, YVar : std_logic_vector( N-1 downto 0 );
 			Variable LFNvar : std_logic_vector( 1 downto 0 );
 		Begin
 			Wait until Resetn = '1';
-			file_open( VectorFile, TestVectorFile, read_mode );
-			report "Using TestVectors from file " & TestVectorFile;		
+			file_open( VectorFile, "LogicUnit00.tvs", read_mode );
 --			for i in TestVector'range loop
 			while not endfile( VectorFile ) loop
 -- Preceed the measurement with "Forced Unknown", 'X'

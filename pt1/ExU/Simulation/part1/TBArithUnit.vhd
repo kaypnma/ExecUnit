@@ -9,24 +9,23 @@ Generic ( N : natural := 64 );
 End Entity TbArithUnit;
 
 Architecture behavioural of TbArithUnit is
-	Constant TestVectorFile : string := "ArithUnit01.tvs";
 	Constant ClockPeriod : time := 2 ns;
 	Constant ResetPeriod : time := 5 ns;
 	Constant PreStimTime : time := 1 ns;
-	Constant PostStimTime : time := 8 ns;
+	--Constant PostStimTime : time := 8 ns;
+	Constant PostStimTime : time := 9 ns;
 	
 	Signal Sstable, Squiet : boolean := false;
 
 	Signal Clock, Resetn : std_logic := '0';
-	Signal A, B, AddY, Y, TbY : std_logic_vector( N-1 downto 0 );
+	Signal A, B, Y, TbY : std_logic_vector( N-1 downto 0 );
 	Signal NotA, AddnSub, ExtWord : std_logic;
 	Signal Cout, Ovfl, Zero, AltB, AltBu : std_logic;
-	Signal AllOut : std_logic_vector( N-1+5 downto 0 );
 -- use a component for the DUT. Use the same Entityname and Port Spec
 -- use default binding rules.
 	Component ArithUnit is
 		Port ( A, B: in std_logic_vector( N-1 downto 0 );
-				AddY, Y	: out std_logic_vector( N-1 downto 0 );
+				Y	: out std_logic_vector( N-1 downto 0 );
 				NotA, AddnSub, ExtWord : in std_logic;
 				Cout, Ovfl, Zero, AltB, AltBu : out std_logic );
 	End Component ArithUnit;
@@ -40,10 +39,9 @@ Begin
 	Resetn <= '0', '1' after ResetPeriod;
 	Sstable <= Y'stable(PostStimTime);
 	Squiet <= Y'quiet(PostStimTime);
-	AllOut <= Y & Cout & Ovfl & Zero & AltB & AltBu;
 -- Instantiate the component	
 DUT:	Component ArithUnit generic map( N => N )
-		port map ( A=>A, B=>B, AddY=>AddY, Y=>Y,
+		port map ( A=>A, B=>B, Y=>Y,
 				NotA=>NotA, AddnSub=>AddnSub, ExtWord=>ExtWord,
 				Cout=>Cout, Ovfl=>Ovfl, Zero=>Zero, AltB=>AltB, AltBu=>AltBu );
 -- *****************************************************************************
@@ -54,15 +52,15 @@ STIM:	Process is
 			Variable ResultV : std_logic := 'X';
 -- Variables used for File I/O.
 			Variable LineBuffer : line;
-			Variable Avar, Bvar, Yvar : std_logic_vector( N-1 downto 0 );
+			Variable Avar, Bvar, YVar : std_logic_vector( N-1 downto 0 );
 			Variable NotAvar, AddnSubvar, ExtWordvar : std_logic;
 			Variable Coutvar, Ovflvar, Zerovar, AltBvar, AltBuvar : std_logic;
 			
 		Begin
 			Wait until Resetn = '1';
 			Wait for 10 ns;
-			file_open( VectorFile, TestVectorFile, read_mode );
-			report "Using TestVectors from file " & TestVectorFile;
+			--file_open( VectorFile, "ArithUnit00.tvs", read_mode );
+			file_open( VectorFile, "ArithUnit01.tvs", read_mode );
 			while not endfile( VectorFile ) loop
 -- Preceed the measurement with "Forced Unknown", 'X'
 				MeasurementIndex <= MeasurementIndex + 1;
@@ -102,7 +100,7 @@ STIM:	Process is
 -- Assign the known status flags to Testbench signals (not really necessary) 
 				
 				Wait until Y'Active = true;
-				Wait until AllOut'Quiet(PostStimTime) = true;
+				Wait until Y'Quiet(PostStimTime) = true;
 -- now check to see if the output values are correct.				
 				EndTime := NOW;
 				PropTimeDelay := EndTIme - StartTime - Y'Last_Active;
@@ -142,25 +140,25 @@ STIM:	Process is
 						"ZeroVar = " & to_string(Zerovar)
 						Severity error;
 				End If;
-				If AddnSubvar = '1' and ExtWordvar = '0' then
-					If AltB /= AltBvar then
-						ResultV := '0';			
-						Assert AltB = AltBvar
-							Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
-							"  AltB = " & to_string(AltB) & CR &
-							"AltBVar = " & to_string(AltBvar)
-							Severity error;
-					End If;
-
-					If AltBu /= AltBuvar then
-						ResultV := '0';			
-						Assert AltBu = AltBuvar
-							Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
-							"  AltBu = " & to_string(AltBu) & CR &
-							"AltBuVar = " & to_string(AltBuvar)
-							Severity error;
-					End If;
+				
+				If AltB /= AltBvar then
+					ResultV := '0';			
+					Assert AltB = AltBvar
+						Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
+						"  AltB = " & to_string(AltB) & CR &
+						"AltBVar = " & to_string(AltBvar)
+						Severity error;
 				End If;
+
+				If AltBu /= AltBuvar then
+					ResultV := '0';			
+					Assert AltBu = AltBuvar
+						Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
+						"  AltBu = " & to_string(AltBu) & CR &
+						"AltBuVar = " & to_string(AltBuvar)
+						Severity error;
+				End If;
+
 --				Report "   ---   Propagation Delay = " & to_string(PropTimeDelay);
 				Wait until Clock = '1';
 			End Loop;
