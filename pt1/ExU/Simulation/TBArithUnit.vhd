@@ -12,7 +12,8 @@ Architecture behavioural of TbArithUnit is
 	Constant ClockPeriod : time := 2 ns;
 	Constant ResetPeriod : time := 5 ns;
 	Constant PreStimTime : time := 1 ns;
-	Constant PostStimTime : time := 8 ns;
+	--Constant PostStimTime : time := 8 ns;
+	Constant PostStimTime : time := 9 ns;
 	
 	Signal Sstable, Squiet : boolean := false;
 
@@ -58,7 +59,8 @@ STIM:	Process is
 		Begin
 			Wait until Resetn = '1';
 			Wait for 10 ns;
-			file_open( VectorFile, "ArithUnit00.tvs", read_mode );
+			--file_open( VectorFile, "ArithUnit00.tvs", read_mode );
+			file_open( VectorFile, "ArithUnit01.tvs", read_mode );
 			while not endfile( VectorFile ) loop
 -- Preceed the measurement with "Forced Unknown", 'X'
 				MeasurementIndex <= MeasurementIndex + 1;
