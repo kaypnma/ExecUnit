@@ -1,12 +1,12 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd
-source_file = 1, C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd
-source_file = 1, C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd
+source_file = 1, C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd
+source_file = 1, C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd
+source_file = 1, C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/db/ExU.cbx.xml
+source_file = 1, C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/db/ExU.cbx.xml
 design_name = hard_block
 design_name = LogicUnit
 instance = comp, \Y[0]~output\, Y[0]~output, LogicUnit, 1
