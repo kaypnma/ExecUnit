@@ -52,7 +52,7 @@ begin
 	AltBu <= NOT c64;
 
 	-- AltB (signed)
-	-- lecture 7 --> Cout, Ovfl (c64 XOR c63)
+	-- lecture 7 --> sum63, Ovfl (c64 XOR c63)
 	AltB <= sum(63) XOR overflow;
 
 	-- sign extend
