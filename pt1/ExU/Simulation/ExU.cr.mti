@@ -1,1 +1,155 @@
+C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Adder
+-- Compiling architecture rtl of Adder
 
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ArithUnit
+-- Compiling architecture rtl of ArithUnit
+-- Loading entity Adder
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/ConfigExU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/ConfigExU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling configuration FuncLUSim
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading entity TbLogicUnit
+-- Loading architecture behavioural of TbLogicUnit
+-- Loading entity LogicUnit
+-- Compiling configuration TimeLUSim
+-- Loading entity TbLogicUnit
+-- Loading architecture behavioural of TbLogicUnit
+-- Loading entity LogicUnit
+-- Compiling configuration FuncAUSim
+-- Loading entity TbArithUnit
+-- Loading architecture behavioural of TbArithUnit
+-- Loading entity ArithUnit
+-- Compiling configuration TimeAUSim
+-- Loading entity TbArithUnit
+-- Loading architecture behavioural of TbArithUnit
+-- Loading entity ArithUnit
+-- Compiling configuration FuncSUSim
+-- Loading entity TbShiftUnit
+-- Loading architecture behavioural of TbShiftUnit
+-- Loading entity ShiftUnit
+-- Compiling configuration TimeSUSim
+-- Loading entity TbShiftUnit
+-- Loading architecture behavioural of TbShiftUnit
+-- Loading entity ShiftUnit
+-- Compiling configuration FuncXUSim
+-- Loading entity TbExecUnit
+-- Loading architecture behavioural of TbExecUnit
+-- Loading entity ExecUnit
+-- Compiling configuration TimeXUSim
+-- Loading entity TbExecUnit
+-- Loading architecture behavioural of TbExecUnit
+-- Loading entity ExecUnit
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/SRL64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/SRL64.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity SRL64
+-- Compiling architecture rtl of SRL64
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity LogicUnit
+-- Compiling architecture rtl of LogicUnit
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ShiftUnit
+-- Compiling architecture rtl of ShiftUnit
+-- Loading package MATH_REAL
+-- Loading entity SLL64
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(37): Signal "ShiftCount" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(39): Signal "ShiftCount" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(41): Signal "ShiftCount" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(47): Illegal sequential statement.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(51): Target type ieee.std_logic_1164.STD_LOGIC_VECTOR in signal assignment is different from expression type.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(54): Illegal sequential statement.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(63): Illegal sequential statement.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(67): Target type ieee.std_logic_1164.STD_LOGIC_VECTOR in signal assignment is different from expression type.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(70): Illegal sequential statement.
+** Error: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ShiftUnit.vhd(78): VHDL Compiler exiting
+
+} {11.0 21.0} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TbArithUnit
+-- Compiling architecture behavioural of TbArithUnit
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/SRA64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/SRA64.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity SRA64
+-- Compiling architecture rtl of SRA64
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBExecUnit.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBExecUnit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TbExecUnit
+-- Compiling architecture behavioural of TbExecUnit
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TbLogicUnit
+-- Compiling architecture behavioural of TbLogicUnit
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBShiftUnit.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/Simulation/TBShiftUnit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TbShiftUnit
+-- Compiling architecture behavioural of TbShiftUnit
+
+} {} {}} C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/SLL64.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/SLL64.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity SLL64
+-- Compiling architecture rtl of SLL64
+
+} {} {}}
