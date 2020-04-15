@@ -48,6 +48,7 @@ begin
 	shiftUnit: entity work.ShiftUnit port map (A => A, B => B, C => add_Y, Y => y_shift, ShiftFN => ShiftFN, ExtWord => ExtWord); 
 	
 	-- instantiate logicUnit entity 
+	-- B signal includes bits from ShiftUnit 
 	logicUnit: entity work.LogicUnit port map (A => A, B => B, Y => y_logic, LogicFN => LogicFN); 
 	
 	--FuncClass MUX for ExecUnit output

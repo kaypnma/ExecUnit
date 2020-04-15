@@ -13,7 +13,7 @@ End Entity ShiftUnit;
 architecture rtl of ShiftUnit is
 	signal y_a, y_b, y_c, sll_out, srl_out, sra_out : std_logic_vector(N-1 downto 0);
 	signal swappedA, swappedinter1, swappedinter3 : std_logic_vector(N-1 downto 0); 
-	signal ShiftCount : std_logic_vector(5 downto 0); 
+	signal ShiftCount : unsigned(5 downto 0); 
 
 --changed to inter
 	signal inter1, inter2, inter3, inter4 : std_logic_vector(N-1 downto 0); 
@@ -23,8 +23,10 @@ begin
 	-- Input select bits 
 	inputASel <= ShiftFN(1) AND ExtWord;
 	
-	-- Input B extract 
-	ShiftCount <= B(5 downto 0); 
+	-- Input B extract( 6-bits for 64-bit or 5-bits for 32-bit) 
+	with ExtWord select
+		ShiftCount <= unsigned("0" & B(4 downto 0)) when '0', 
+			unsigned(B(5 downto 0)) when others;
 	
 	-- Swap Word
 	swappedA(N-1 downto (N/2)) <= A((N/2)-1 downto 0); 
