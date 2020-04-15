@@ -4,6 +4,262 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "AddY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[7]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[8]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[9]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[10]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[11]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[12]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[13]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[14]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[15]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[16]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[17]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[18]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[19]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[20]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[21]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[22]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[23]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[24]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[25]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[26]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[27]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[28]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[29]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[30]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[31]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[32]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[33]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[34]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[35]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[36]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[37]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[38]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[39]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[40]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[41]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[42]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[43]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[44]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[45]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[46]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[47]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[48]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[49]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[50]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[51]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[52]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[53]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[54]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[55]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[56]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[57]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[58]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[59]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[60]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[61]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[62]",
+					"strict" : false
+				},
+				{
+					"name" : "AddY[63]",
+					"strict" : false
+				},
+				{
 					"name" : "Y[0]",
 					"strict" : false
 				},
@@ -260,7 +516,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "LogicFN[0]",
+					"name" : "Cout",
+					"strict" : false
+				},
+				{
+					"name" : "Ovfl",
+					"strict" : false
+				},
+				{
+					"name" : "Zero",
+					"strict" : false
+				},
+				{
+					"name" : "AltB",
+					"strict" : false
+				},
+				{
+					"name" : "AltBu",
 					"strict" : false
 				},
 				{
@@ -272,7 +544,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "LogicFN[1]",
+					"name" : "NotA",
+					"strict" : false
+				},
+				{
+					"name" : "AddnSub",
 					"strict" : false
 				},
 				{
@@ -777,6 +1053,10 @@
 				},
 				{
 					"name" : "A[63]",
+					"strict" : false
+				},
+				{
+					"name" : "ExtWord",
 					"strict" : false
 				}
 			]

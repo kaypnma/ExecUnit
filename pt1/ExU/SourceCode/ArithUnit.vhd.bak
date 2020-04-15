@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 Entity ArithUnit is
 	Generic ( N : natural := 64 );
 	Port ( 	A, B : in std_logic_vector( N-1 downto 0 );
-		Y : out std_logic_vector( N-1 downto 0 );
+		AddY, Y : out std_logic_vector( N-1 downto 0 );
 	-- Control signals
 		NotA, AddnSub, ExtWord : in std_logic := '0';
 	-- Status signals

@@ -25,6 +25,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ShiftUnit
 -- Compiling architecture rtl of ShiftUnit
 
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBArithUnit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TbArithUnit
+-- Compiling architecture behavioural of TbArithUnit
+
 } {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/SRA64.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\SourceCode\SRA64.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -49,6 +58,24 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ArithUnit
 -- Compiling architecture structure of ArithUnit
 
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBLogicUnit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TbLogicUnit
+-- Compiling architecture behavioural of TbLogicUnit
+
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBShiftUnit.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBShiftUnit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TbShiftUnit
+-- Compiling architecture behavioural of TbShiftUnit
+
 } {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/SLL64.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\SourceCode\SLL64.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -59,7 +86,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity SLL64
 -- Compiling architecture rtl of SLL64
 
-} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd}
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\SourceCode\ArithUnit.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -78,7 +105,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity Adder
 -- Compiling architecture rtl of Adder
 
-} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ConfigExU.vhd} {0 {vcom -work work -2008 -explicit -stats=none {C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\Simulation\ConfigExU.vhd}
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ConfigExU.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\Simulation\ConfigExU.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Compiling configuration FuncLUSim
@@ -100,10 +127,38 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity TbArithUnit
 -- Loading architecture behavioural of TbArithUnit
 -- Loading entity ArithUnit
-** Error: C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\Simulation\ConfigExU.vhd(18): (vcom-1131) Port "AddY" is declared on component "ArithUnit" but not on entity "ArithUnit".
-** Error: C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\Simulation\ConfigExU.vhd(20): VHDL Compiler exiting
+-- Compiling configuration TimeAUSim
+-- Loading entity TbArithUnit
+-- Loading architecture behavioural of TbArithUnit
+-- Loading entity ArithUnit
+-- Compiling configuration FuncSUSim
+-- Loading entity TbShiftUnit
+-- Loading architecture behavioural of TbShiftUnit
+-- Loading entity ShiftUnit
+-- Compiling configuration TimeSUSim
+-- Loading entity TbShiftUnit
+-- Loading architecture behavioural of TbShiftUnit
+-- Loading entity ShiftUnit
+-- Compiling configuration FuncXUSim
+-- Loading entity TbExecUnit
+-- Loading architecture behavioural of TbExecUnit
+-- Loading entity ExecUnit
+-- Compiling configuration TimeXUSim
+-- Loading entity TbExecUnit
+-- Loading architecture behavioural of TbExecUnit
+-- Loading entity ExecUnit
 
-} {23.0 25.0} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ModelSim/LogicUnit.vho} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ModelSim/LogicUnit.vho}
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/SRL64.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\SourceCode\SRL64.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity SRL64
+-- Compiling architecture rtl of SRL64
+
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ModelSim/LogicUnit.vho} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/ModelSim/LogicUnit.vho}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -117,14 +172,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity LogicUnit
 -- Compiling architecture structure of LogicUnit
 
-} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/SRL64.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:\Users\Kay Arellano\Desktop\ENSC350_FinalProject\ensc350-final-project\pt1\ExU\SourceCode\SRL64.vhd}
+} {} {}} {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBExecUnit.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/Simulation/TBExecUnit.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package MATH_REAL
--- Compiling entity SRL64
--- Compiling architecture rtl of SRL64
+-- Compiling entity TbExecUnit
+-- Compiling architecture behavioural of TbExecUnit
 
 } {} {}}

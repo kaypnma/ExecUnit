@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ExU
-Thu Apr 09 20:30:38 2020
+Sun Apr 12 18:59:56 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,8 +14,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |LogicUnit
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |ArithUnit
+ 10. Parameter Settings for User Entity Instance: Adder:adder64
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
@@ -44,16 +44,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 09 20:30:38 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 12 18:59:56 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ExU                                         ;
-; Top-level Entity Name              ; LogicUnit                                   ;
+; Top-level Entity Name              ; ArithUnit                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 64                                          ;
-;     Total combinational functions  ; 64                                          ;
+; Total logic elements               ; 248                                         ;
+;     Total combinational functions  ; 248                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 194                                         ;
+; Total pins                         ; 264                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; LogicUnit          ; ExU                ;
+; Top-level entity name                                            ; ArithUnit          ; ExU                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,54 +163,56 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; SourceCode/LogicUnit.vhd         ; yes             ; User VHDL File  ; C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
+; SourceCode/ArithUnit.vhd         ; yes             ; User VHDL File  ; C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd ;         ;
+; SourceCode/Adder.vhd             ; yes             ; User VHDL File  ; C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd     ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 64               ;
-;                                             ;                  ;
-; Total combinational functions               ; 64               ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 64               ;
-;     -- 3 input functions                    ; 0                ;
-;     -- <=2 input functions                  ; 0                ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 64               ;
-;     -- arithmetic mode                      ; 0                ;
-;                                             ;                  ;
-; Total registers                             ; 0                ;
-;     -- Dedicated logic registers            ; 0                ;
-;     -- I/O registers                        ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 194              ;
-;                                             ;                  ;
-; Embedded Multiplier 9-bit elements          ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; LogicFN[0]~input ;
-; Maximum fan-out                             ; 64               ;
-; Total fan-out                               ; 514              ;
-; Average fan-out                             ; 1.14             ;
-+---------------------------------------------+------------------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 248        ;
+;                                             ;            ;
+; Total combinational functions               ; 248        ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 152        ;
+;     -- 3 input functions                    ; 32         ;
+;     -- <=2 input functions                  ; 64         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 248        ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 264        ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; NotA~input ;
+; Maximum fan-out                             ; 131        ;
+; Total fan-out                               ; 1229       ;
+; Average fan-out                             ; 1.58       ;
++---------------------------------------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |LogicUnit                 ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 194  ; 0            ; |LogicUnit          ; LogicUnit   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
+; |ArithUnit                 ; 248 (118)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 264  ; 0            ; |ArithUnit               ; ArithUnit   ; work         ;
+;    |Adder:adder64|         ; 130 (130)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ArithUnit|Adder:adder64 ; Adder       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -229,17 +231,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |LogicUnit|Mux63           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
 +---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |LogicUnit ;
+; Parameter Settings for User Entity Instance: Top-level Entity: |ArithUnit ;
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
@@ -248,18 +241,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Adder:adder64 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; n              ; 64    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 194                         ;
-; cycloneiii_lcell_comb ; 64                          ;
-;     normal            ; 64                          ;
-;         4 data inputs ; 64                          ;
+; boundary_port         ; 264                         ;
+; cycloneiii_lcell_comb ; 249                         ;
+;     normal            ; 249                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 64                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 152                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 66.00                       ;
+; Average LUT depth     ; 42.19                       ;
 +-----------------------+-----------------------------+
 
 
@@ -278,31 +284,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Apr 09 20:30:20 2020
+    Info: Processing started: Sun Apr 12 18:59:36 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ExU -c ExU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file sourcecode/logicunit.vhd
-    Info (12022): Found design unit 1: LogicUnit-rtl File: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd Line: 13
-    Info (12023): Found entity 1: LogicUnit File: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd Line: 5
+    Info (12022): Found design unit 1: LogicUnit-rtl File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd Line: 13
+    Info (12023): Found entity 1: LogicUnit File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/LogicUnit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file sourcecode/arithunit.vhd
-    Info (12022): Found design unit 1: ArithUnit-rtl File: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd Line: 15
-    Info (12023): Found entity 1: ArithUnit File: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd Line: 5
+    Info (12022): Found design unit 1: ArithUnit-rtl File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd Line: 15
+    Info (12023): Found entity 1: ArithUnit File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file sourcecode/adder.vhd
-    Info (12022): Found design unit 1: Adder-rtl File: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd Line: 15
-    Info (12023): Found entity 1: Adder File: C:/Users/Izyl/Desktop/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd Line: 5
-Info (12127): Elaborating entity "LogicUnit" for the top level hierarchy
+    Info (12022): Found design unit 1: Adder-rtl File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd Line: 15
+    Info (12023): Found entity 1: Adder File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/Adder.vhd Line: 5
+Info (12127): Elaborating entity "ArithUnit" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at ArithUnit.vhd(20): used explicit default value for signal "zeros" because signal was never assigned a value File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd Line: 20
+Info (12128): Elaborating entity "Adder" for hierarchy "Adder:adder64" File: C:/Users/Kay Arellano/Desktop/ENSC350_FinalProject/ensc350-final-project/pt1/ExU/SourceCode/ArithUnit.vhd Line: 31
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 258 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 130 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 64 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4809 megabytes
-    Info: Processing ended: Thu Apr 09 20:30:38 2020
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:34
+Info (21057): Implemented 512 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 131 input pins
+    Info (21059): Implemented 133 output pins
+    Info (21061): Implemented 248 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Sun Apr 12 18:59:56 2020
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:40
 
 

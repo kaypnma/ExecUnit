@@ -57,10 +57,13 @@ begin
 
 	-- sign extend
 	sign <= sum(31);
-
+	
+	-- outputs
 	with ExtWord select
 		Y <= 	sum when '0',
-			(N-1 downto 32 => sign) & sum(31 downto 0) when others;			
+			(N-1 downto 32 => sign) & sum(31 downto 0) when others;		
+
+	AddY <= sum;	
 end architecture rtl;
 
 
