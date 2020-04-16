@@ -22,8 +22,6 @@ signal S8: std_logic_vector(63 downto 0);
 signal S9: std_logic_vector(63 downto 0);
 signal L1: std_logic_vector(63 downto 0);
 signal L2: std_logic_vector(63 downto 0);
-signal L3: std_logic_vector(63 downto 0);
-signal L4: std_logic_vector(63 downto 0);
 
 component mux
       port(input0    : in  std_logic_vector (63 downto 0);
