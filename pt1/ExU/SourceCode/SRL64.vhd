@@ -42,9 +42,9 @@ begin
   a5:  S4 <= "0000" & R1(63 downto 4); 
   a6:  S5 <= "00000000" & R1(63 downto 8); 
   a7:  S6 <= "000000000000" & R1(63 downto 12); 
-  a8:  mux port map (input0=>L1, input1=>S4, input2=>S5, input3=>S6, sel1=>ShiftCount(3), sel2=>ShiftCount(2), result=>R2);
+  a8:  mux port map (input0=>R1, input1=>S4, input2=>S5, input3=>S6, sel1=>ShiftCount(3), sel2=>ShiftCount(2), result=>R2);
   a9:  S7 <= "00" & R2(63 downto 2); 
   a10: S8 <= '0' & R2(63 downto 1);
   a11: S9 <= "000" & R2(63 downto 3);   
-  a12: mux port map (input0=>L2, input1=>S7, input2=>S8, input3=>S9, sel1=>ShiftCount(1), sel2=>ShiftCount(0), result=>Y);
+  a12: mux port map (input0=>R2, input1=>S7, input2=>S8, input3=>S9, sel1=>ShiftCount(1), sel2=>ShiftCount(0), result=>Y);
 end architecture rtl;
