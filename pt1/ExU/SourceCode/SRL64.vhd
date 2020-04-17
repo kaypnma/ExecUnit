@@ -27,10 +27,10 @@ signal R2: std_logic_vector(63 downto 0);
 component mux
       port(input0    : in  std_logic_vector (63 downto 0);
            input1    : in  std_logic_vector (63 downto 0);
-	       input2    : in  std_logic_vector (63 downto 0);
-	       input3    : in  std_logic_vector (63 downto 0);
+	   input2    : in  std_logic_vector (63 downto 0);
+	   input3    : in  std_logic_vector (63 downto 0);
            sel1    : in  std_logic;
-	       sel2    : in std_logic;
+	   sel2    : in std_logic;
            result : out std_logic_vector (63 downto 0));
 end component;
 
