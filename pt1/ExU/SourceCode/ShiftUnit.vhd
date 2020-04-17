@@ -5,13 +5,74 @@ use ieee.numeric_std.all;
 Entity ShiftUnit is
 	Generic ( N : natural := 64 );
 	Port ( A, B, C : in std_logic_vector( N-1 downto 0 );
-	-- Output
-		Y : out std_logic_vector( N-1 downto 0 );
-	-- Control signals
-		ShiftFN : in std_logic_vector( 1 downto 0 );
-		ExtWord : in std_logic );
+	Y : out std_logic_vector( N-1 downto 0 );
+	ShiftFN : in std_logic_vector( 1 downto 0 );
+	ExtWord : in std_logic );	
 End Entity ShiftUnit;
 
 architecture rtl of ShiftUnit is
-begin
-end architecture rtl;
+	signal y_a, y_b, y_c, sll_out, srl_out, sra_out : std_logic_vector(N-1 downto 0);
+	signal swappedA, swappedinter1, swappedinter3 : std_logic_vector(N-1 downto 0); 
+	signal ShiftCount : unsigned(5 downto 0); 
+	signal inter1, inter2, inter3, inter4 : std_logic_vector(N-1 downto 0); 
+	signal inputASel, sign1, sign2: std_logic;
+	
+	signal b31 : std_logic;
+	signal a31 : std_logic;
+	signal tmp : std_logic;
+begin	
+	
+	-- Input select bits 
+	inputASel <= ShiftFN(1) AND ExtWord;
+	
+	-- Input B extract( 6-bits for 64-bit or 5-bits for 32-bit) 
+	with ExtWord select
+		ShiftCount <= unsigned(B(5 downto 0)) when '0', 
+			unsigned('0' & B(4 downto 0)) when others;
+	
+	-- Swap Word
+	swappedA(N-1 downto (N/2)) <= A((N/2)-1 downto 0); 
+	--swappedA(N-1 downto (N/2)) <= A(N-1 downto (N/2));
+	--swappedA((N/2)-1 downto 0) <= (others => '0'); 
+	swappedA((N/2)-1 downto 0) <= A(N-1 downto (N/2));
+	
+	-- Input into 64-bit barrel shifter
+	with inputASel select 
+		y_a <= A when '0', 
+			swappedA when others; 
+			
+	-- instantiate Shifter entities 
+	sll_op: entity work.SLL64 port map (X => y_a, Y => sll_out, ShiftCount => ShiftCount); 
+	
+	srl_op: entity work.SRL64 port map (X => y_a, Y => srl_out, ShiftCount => ShiftCount); 
+	
+	sra_op: entity work.SRA64 port map (X => y_a, Y => sra_out, ShiftCount => ShiftCount); 
+	
+	-- sll result
+	with ShiftFN(0) select
+		inter1 <=	C when '0',
+				sll_out when others;
+
+	b31 <= inter1(31);
+
+	with ExtWord select
+		inter2 <=	inter1 when '0',
+				(N-1 downto 32 => b31) & inter1(31 downto 0) when others;
+		
+	-- sra and srl result
+	with ShiftFN(0) select
+		inter3 <=	srl_out when '0',
+				sra_out when others;
+
+	--a32 <= inter3(32);
+	a31 <= inter3(N-1);
+
+	with ExtWord select
+		inter4 <=	inter3 when '0',
+				(N-1 downto 32 => a31) & inter3(63 downto 32) when others;
+
+	with ShiftFN(1) select
+		Y <= inter2 when '0', 
+			inter4 when others; 
+		
+end architecture rtl; 

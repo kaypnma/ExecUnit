@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Sat Apr 04 17:20:19 2020
+Analysis & Synthesis Status : Successful - Thu Apr 16 20:49:10 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ExU
 Top-level Entity Name : ArithUnit
@@ -7,7 +7,7 @@ Total logic elements : 248
     Total combinational functions : 248
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 200
+Total pins : 264
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -9,7 +9,7 @@ Generic ( N : natural := 64 );
 End Entity TbShiftUnit;
 
 Architecture behavioural of TbShiftUnit is
-	Constant TestVectorFile : string := "SRL32Unit00.tvs";
+	Constant TestVectorFile : string := "SRL64Unit00.tvs";
 	Constant ClockPeriod : time := 2 ns;
 	Constant ResetPeriod : time := 5 ns;
 	Constant PreStimTime : time := 1 ns;
