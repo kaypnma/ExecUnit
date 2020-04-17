@@ -11,39 +11,63 @@ Entity SLL64 is
 End Entity SLL64;
 
 architecture rtl of SLL64 is
-signal S1: std_logic_vector(63 downto 0);
-signal S2: std_logic_vector(63 downto 0);
-signal S3: std_logic_vector(63 downto 0);
-signal S4: std_logic_vector(63 downto 0);
-signal S5: std_logic_vector(63 downto 0);
-signal S6: std_logic_vector(63 downto 0);
-signal S7: std_logic_vector(63 downto 0);
-signal S8: std_logic_vector(63 downto 0);
-signal S9: std_logic_vector(63 downto 0);
-signal L1: std_logic_vector(63 downto 0);
-signal L2: std_logic_vector(63 downto 0);
+	signal S1: std_logic_vector(63 downto 0);
+	signal S2: std_logic_vector(63 downto 0);
+	signal S3: std_logic_vector(63 downto 0);
+	signal S4: std_logic_vector(63 downto 0);
+	signal S5: std_logic_vector(63 downto 0);
+	signal S6: std_logic_vector(63 downto 0);
+	signal S7: std_logic_vector(63 downto 0);
+	signal S8: std_logic_vector(63 downto 0);
+	signal S9: std_logic_vector(63 downto 0);
+	signal L1: std_logic_vector(63 downto 0);
+	signal L2: std_logic_vector(63 downto 0);
 
-component mux
-      port(input0    : in  std_logic_vector (63 downto 0);
-           input1    : in  std_logic_vector (63 downto 0);
-	   input2    : in  std_logic_vector (63 downto 0);
-	   input3    : in  std_logic_vector (63 downto 0);
-           sel1    : in  std_logic;
-	   sel2    : in std_logic;
-           result : out std_logic_vector (63 downto 0));
-end component;
+
+--component mux
+      --port(input0    : in  std_logic_vector (63 downto 0);
+           --input1    : in  std_logic_vector (63 downto 0);
+	   --input2    : in  std_logic_vector (63 downto 0);
+	   --input3    : in  std_logic_vector (63 downto 0);
+           --sel1    : in  std_logic;
+	   --sel2    : in std_logic;
+           --result : out std_logic_vector (63 downto 0));
+--end component;
 
 begin
-  a1:  S1 <= X(31 downto 0) & "00000000000000000000000000000000"; 
-  a2:  S2 <= X(47 downto 0) & "0000000000000000"; 
-  a3:  S3 <= X(15 downto 0) & "000000000000000000000000000000000000000000000000"; 
-  a4:  mux port map (input0=>X, input1=>S1, input2=>S2, input3=>S3, sel1=>ShiftCount(5), sel2=>ShiftCount(4), result=>L1);
-  a5:  S4 <= L1(59 downto 0) & "0000"; 
-  a6:  S5 <= L1(55 downto 0) & "00000000"; 
-  a7:  S6 <= L1(51 downto 0) & "000000000000"; 
-  a8:  mux port map (input0=>L1, input1=>S4, input2=>S5, input3=>S6, sel1=>ShiftCount(3), sel2=>ShiftCount(2), result=>L2);
-  a9:  S7 <= L2(61 downto 0) & "00"; 
-  a10: S8 <= L2(62 downto 0) & '0';
-  a11: S9 <= L2(60 downto 0) & "000";   
-  a12: mux port map (input0=>L2, input1=>S7, input2=>S8, input3=>S9, sel1=>ShiftCount(1), sel2=>ShiftCount(0), result=>Y);
+	a1:  S1 <= X(31 downto 0) & "00000000000000000000000000000000"; 
+	a2:  S2 <= X(47 downto 0) & "0000000000000000"; 	
+	a3:  S3 <= X(15 downto 0) & "000000000000000000000000000000000000000000000000"; 
+
+	with ShiftCount(5 downto 4) select
+		L1 <=	X when "00",
+			S1 when "10",
+			S2 when "01",
+			S3 when others;	      
+
+	--a4:  mux port map (input0=>X, input1=>S1, input2=>S2, input3=>S3, sel1=>ShiftCount(5), sel2=>ShiftCount(4), result=>L1);
+	a5:  S4 <= L1(59 downto 0) & "0000"; 
+	a6:  S5 <= L1(55 downto 0) & "00000000"; 
+ 	a7:  S6 <= L1(51 downto 0) & "000000000000"; 
+  
+
+ 	with ShiftCount(3 downto 2) select
+		L2 <=	L1 when "00",
+			S5 when "10",
+			S4 when "01",
+			S6 when others;	
+
+
+	--a8:  mux port map (input0=>L1, input1=>S4, input2=>S5, input3=>S6, sel1=>ShiftCount(3), sel2=>ShiftCount(2), result=>L2);
+	a9:  S7 <= L2(61 downto 0) & "00"; 
+	a10: S8 <= L2(62 downto 0) & '0';
+	a11: S9 <= L2(60 downto 0) & "000";   
+
+	with ShiftCount(1 downto 0) select
+		Y <=	L2 when "00",
+			S7 when "10",
+			S8 when "01",
+			S9 when others;	
+
+	--a12: mux port map (input0=>L2, input1=>S7, input2=>S8, input3=>S9, sel1=>ShiftCount(1), sel2=>ShiftCount(0), result=>Y);
 end architecture rtl;
